@@ -13,6 +13,7 @@ class App extends React.Component {
   render() {
     return (
       <BrowserRouter>
+        {/* <Switch> */}
         <Route path="/" component={ Login } />
         <Route path="/search" component={ Search } />
         <Route path="/album/:id" component={ Album } />
@@ -20,6 +21,7 @@ class App extends React.Component {
         <Route path="/profile" component={ Profile } />
         <Route path="/profile/edit" component={ ProfileEdit } />
         <Route path="*" component={ NotFound } />
+        {/* </Switch> */}
       </BrowserRouter>
     );
   }
