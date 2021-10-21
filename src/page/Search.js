@@ -1,5 +1,5 @@
 import React from 'react';
-// import Header from '../Components/Header';
+import Header from '../Components/Header';
 
 class Search extends React.Component {
   constructor() {
@@ -24,6 +24,7 @@ class Search extends React.Component {
 
     return (
       <div data-testid="page-search">
+        <Header />
         <form>
           <label htmlFor="artist">
             <input
