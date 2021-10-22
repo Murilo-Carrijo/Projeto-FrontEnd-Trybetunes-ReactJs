@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import { Route } from 'react-router';
+import { Route, Switch } from 'react-router';
 import Login from './page/Login';
 import Search from './page/Search';
 import Album from './page/Album';
@@ -13,15 +13,15 @@ class App extends React.Component {
   render() {
     return (
       <BrowserRouter>
-        {/* <Switch> */}
-        <Route path="/" component={ Login } />
-        <Route path="/search" component={ Search } />
-        <Route path="/album/:id" component={ Album } />
-        <Route path="/favorites" component={ Favorites } />
-        <Route path="/profile" component={ Profile } />
-        <Route path="/profile/edit" component={ ProfileEdit } />
-        <Route path="*" component={ NotFound } />
-        {/* </Switch> */}
+        <Switch>
+          <Route path="/search" component={ Search } />
+          <Route path="/album/:id" component={ Album } />
+          <Route path="/favorites" component={ Favorites } />
+          <Route path="/profile" component={ Profile } />
+          <Route path="/profile/edit" component={ ProfileEdit } />
+          <Route path="/" component={ Login } />
+          <Route path="*" component={ NotFound } />
+        </Switch>
       </BrowserRouter>
     );
   }
