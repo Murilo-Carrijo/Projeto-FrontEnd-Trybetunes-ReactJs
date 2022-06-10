@@ -14,13 +14,16 @@ class App extends React.Component {
     return (
       <BrowserRouter>
         <Switch>
-          <Route path="/search" component={ Search } />
-          <Route path="/album/:id" component={ Album } />
-          <Route path="/favorites" component={ Favorites } />
-          <Route path="/profile/edit" component={ ProfileEdit } />
-          <Route path="/profile" component={ Profile } />
-          <Route exact path="/" component={ Login } />
-          <Route path="*" component={ NotFound } />
+          <Route path="/search" render={ (props) => <Search { ...props } /> } />
+          <Route path="/album/:id" render={ (props) => <Album { ...props } /> } />
+          <Route path="/favorites" render={ (props) => <Favorites { ...props } /> } />
+          <Route
+            path="/profile/edit"
+            render={ (props) => <ProfileEdit { ...props } /> }
+          />
+          <Route path="/profile" render={ (props) => <Profile { ...props } /> } />
+          <Route exact path="/" render={ (props) => <Login { ...props } /> } />
+          <Route path="*" render={ (props) => <NotFound { ...props } /> } />
         </Switch>
       </BrowserRouter>
     );

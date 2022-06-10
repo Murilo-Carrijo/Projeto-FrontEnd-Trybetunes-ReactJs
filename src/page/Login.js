@@ -2,6 +2,9 @@ import React from 'react';
 import { Redirect } from 'react-router';
 import { createUser } from '../services/userAPI';
 import Loading from './Loading';
+import logo from '../image/logo-trybetunes-removebg.png';
+
+import '../style/Login.css';
 
 class Login extends React.Component {
   constructor() {
@@ -50,22 +53,26 @@ class Login extends React.Component {
   render() {
     const { loginDisabled, name, loading, redirect } = this.state;
     return (
-      <div data-testid="page-login">
+      <div className="login-page" data-testid="page-login">
         {loading && <Loading />}
         {redirect && <Redirect to="/search" />}
+        <img src={ logo } alt="logo" />
         <form className="login">
           <label htmlFor="login-name">
             <input
+              className="login-name-input"
               data-testid="login-name-input"
               id="login-name"
               name="name"
               type="text"
+              placeholder="Nome"
               onChange={ this.onInputChange }
               value={ name }
             />
           </label>
 
           <button
+            className="login-submit-button"
             type="submit"
             data-testid="login-submit-button"
             disabled={ loginDisabled }
