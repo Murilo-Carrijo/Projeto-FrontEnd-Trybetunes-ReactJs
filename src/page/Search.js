@@ -4,6 +4,8 @@ import searchAlbumsAPI from '../services/searchAlbumsAPI';
 import Header from '../Components/Header';
 import Loading from './Loading';
 
+import '../style/Search.css';
+
 class Search extends React.Component {
   constructor() {
     super();
@@ -44,7 +46,7 @@ class Search extends React.Component {
   inputAndButton() {
     const { artist, artistDisabled } = this.state;
     return (
-      <form>
+      <form className="search-container">
         <label htmlFor="artist">
           <input
             data-testid="search-artist-input"
@@ -72,24 +74,30 @@ class Search extends React.Component {
   showAlbum() {
     const { albuns, artistSearched } = this.state;
     const result = `Resultado de álbuns de: ${artistSearched}`;
+    console.log(albuns);
     return (
       <div>
-        { albuns.length ? result : '' }
-        { albuns.length
-          ? albuns.map((album) => (
-            <section key={ album.collectionId }>
-              <h3>
-                <Link
-                  to={ `/album/${album.collectionId}` }
-                  data-testid={ `link-to-album-${album.collectionId}` }
-                >
-                  { album.collectionName }
-                </Link>
-              </h3>
-              {album.artistName}
-            </section>
-          ))
-          : <h2>Nenhum álbum foi encontrado</h2>}
+        <h2 className="title-result">
+          { albuns.length ? result : '' }
+        </h2>
+        <div className="result-container">
+          { albuns.length
+            ? albuns.map((album) => (
+              <section className="album-container" key={ album.collectionId }>
+                <img src={ album.artworkUrl100 } alt={ album.collectionName } />
+                <h3>
+                  <Link
+                    to={ `/album/${album.collectionId}` }
+                    data-testid={ `link-to-album-${album.collectionId}` }
+                  >
+                    { album.collectionName }
+                  </Link>
+                </h3>
+                {album.artistName}
+              </section>
+            ))
+            : <h2>Nenhum álbum foi encontrado</h2>}
+        </div>
       </div>
     );
   }
@@ -100,7 +108,6 @@ class Search extends React.Component {
     return (
       <div data-testid="page-search">
         <Header />
-        Search:
         { searchInputButton ? this.inputAndButton() : <Loading /> }
         { albunsSearched ? this.showAlbum() : '' }
       </div>

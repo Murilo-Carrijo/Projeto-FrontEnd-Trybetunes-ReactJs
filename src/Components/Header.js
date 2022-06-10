@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Loading from '../page/Loading';
 import { getUser } from '../services/userAPI';
-import logo from '../image/logo-trybetunes-removebg.png';
+import logo from '../image/logo-white.png';
 
 import '../style/Header.css';
 
@@ -35,7 +35,7 @@ class Header extends React.Component {
             loading ? <Loading />
               : <p className="header-user-name" data-testid="header-user-name">
                 { name }
-                </p>
+              </p>
           }
         </div>
 
