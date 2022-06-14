@@ -21,7 +21,7 @@ class Login extends React.Component {
     };
   }
 
-  onInputChange({ target }) {
+  onInputChange = ({ target }) => {
     const { name, value } = target;
 
     this.setState({

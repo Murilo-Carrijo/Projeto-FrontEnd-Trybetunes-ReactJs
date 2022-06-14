@@ -74,7 +74,6 @@ class Search extends React.Component {
   showAlbum() {
     const { albuns, artistSearched } = this.state;
     const result = `Resultado de álbuns de: ${artistSearched}`;
-    console.log(albuns);
     return (
       <div>
         <h2 className="title-result">
@@ -84,7 +83,9 @@ class Search extends React.Component {
           { albuns.length
             ? albuns.map((album) => (
               <section className="album-container" key={ album.collectionId }>
-                <img src={ album.artworkUrl100 } alt={ album.collectionName } />
+                <div className="image-album">
+                  <img src={ album.artworkUrl100 } alt={ album.collectionName } />
+                </div>
                 <h3>
                   <Link
                     to={ `/album/${album.collectionId}` }

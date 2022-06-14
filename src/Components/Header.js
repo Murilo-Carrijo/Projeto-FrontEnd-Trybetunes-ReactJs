@@ -31,12 +31,9 @@ class Header extends React.Component {
       <header className="header-component" data-testid="header-component">
         <div className="header-first-container">
           <img src={ logo } alt="logo" />
-          {
-            loading ? <Loading />
-              : <p className="header-user-name" data-testid="header-user-name">
-                { name }
-              </p>
-          }
+          { loading
+            ? <Loading />
+            : <p className="header-user-name" data-testid="header-user-name">{ name }</p>}
         </div>
 
         <div className="links-container">

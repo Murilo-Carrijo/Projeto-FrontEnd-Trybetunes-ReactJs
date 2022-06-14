@@ -17,11 +17,10 @@ export class MusicCard extends React.Component {
   }
 
   isFavorite = async () => {
-    const { trackId } = this.props;
-    // const { isFavorite } = this.state;
+    const { tracks } = this.props;
     const savedSong = await getFavoriteSongs();
-    savedSong.forEach((savedSongs) => {
-      if (savedSongs.trackId === trackId) {
+    await savedSong.forEach((savedSongs) => {
+      if (savedSongs.trackId === tracks.trackId) {
         this.setState({
           isChecked: true,
         });
@@ -56,8 +55,9 @@ export class MusicCard extends React.Component {
   render() {
     const { tracks } = this.props;
     const { isChecked, loading } = this.state;
+    console.log(isChecked);
     const formMusic = (
-      <section key={ tracks.trackName }>
+      <section className="music-components" key={ tracks.trackName }>
         <audio data-testid="audio-component" src={ tracks.previewUrl } controls>
           <track kind="captions" />
           O seu navegador não suporta o elemento
@@ -71,7 +71,7 @@ export class MusicCard extends React.Component {
             name={ tracks.trackName }
             id={ tracks.trackId }
             type="checkbox"
-            defaultChecked={ isChecked }
+            checked={ isChecked }
             onChange={ this.toggleChange }
             data-testid={ `checkbox-music-${tracks.trackId}` }
           />
@@ -79,7 +79,7 @@ export class MusicCard extends React.Component {
       </section>
     );
     return (
-      <div>
+      <div className="music">
         <h5>{ tracks.trackName }</h5>
         { loading ? <Loading /> : formMusic }
       </div>

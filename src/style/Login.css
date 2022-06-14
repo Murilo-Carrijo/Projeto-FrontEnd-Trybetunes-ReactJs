@@ -9,7 +9,9 @@
 }
 
 .login-page img {
+  height: auto;
   margin-bottom: 90px;
+  width: 250px;
 }
 
 .login {
