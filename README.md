@@ -25,6 +25,8 @@ Neste projeto, verificamos se voce é capaz de:
 
   * Criar links de navegação na aplicação com o componente `Link`;
 
+  * Desenvolvimento de `CSS` para as paginas;
+
 
 ---
 
