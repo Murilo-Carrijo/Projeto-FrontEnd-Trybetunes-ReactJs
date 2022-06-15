@@ -39,5 +39,5 @@ Neste projeto, verificamos se voce é capaz de:
   * Instale as dependências:
     * `npm install`
   * Inicialize o projeto:
-    * `npm start` (uma nova página deve abrir no seu navegador com um texto simples)
+    * `npm start`
  
