@@ -33,7 +33,7 @@ Neste projeto, verificamos se voce é capaz de:
 # Como rodar a aplicação em seu computador
 
 1. Clone o repositório
-  * `git clone git@github.com:tryber/sd-015-b-project-trybetunes.git`.
+  * `git@github.com:Murilo-Carrijo/Trybetunes.git`.
 
 2. Instale as dependências e inicialize o projeto
   * Instale as dependências:
