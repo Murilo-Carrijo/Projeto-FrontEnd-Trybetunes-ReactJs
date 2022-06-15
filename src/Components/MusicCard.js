@@ -55,7 +55,6 @@ export class MusicCard extends React.Component {
   render() {
     const { tracks } = this.props;
     const { isChecked, loading } = this.state;
-    console.log(isChecked);
     const formMusic = (
       <section className="music-components" key={ tracks.trackName }>
         <audio data-testid="audio-component" src={ tracks.previewUrl } controls>
@@ -66,7 +65,7 @@ export class MusicCard extends React.Component {
           .
         </audio>
         <label htmlFor={ tracks.trackName }>
-          Favorita
+          Favoritar
           <input
             name={ tracks.trackName }
             id={ tracks.trackId }

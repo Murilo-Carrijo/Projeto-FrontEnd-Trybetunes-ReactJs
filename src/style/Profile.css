@@ -1,0 +1,43 @@
+.profile-container {
+  align-content: center;
+  align-items: center;
+  background-color: #f2f7f5;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  justify-content: space-between;
+  margin: auto;
+  margin-top: 100px;
+  padding: 35px;
+  width: 40%;
+}
+
+.profile-header {
+  align-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.profile-image {
+  align-content: center;
+  align-items: center;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+  width: 100px;
+}
+
+.button-redirect {
+  align-content: center;
+  align-items: center;
+  border: 1px solid #3da9fc;
+  border-radius: 8px;
+  color: #3da9fc;
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+  text-decoration: none;
+}

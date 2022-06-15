@@ -1,0 +1,61 @@
+.profile-title {
+  align-content: center;
+  align-items: center;
+  color: #00473e;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-top: 32px;
+}
+
+.inputs-container {
+  align-content: center;
+  align-items: center;
+  box-shadow: 0 2px 4px #16161a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  margin-top: 32px;
+  padding: 16px;
+  width: 40%;
+}
+
+.inputs-container label {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 100%;
+}
+
+.inputs-container input {
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-top: 16px;
+  padding: 8px;
+  width: 60%;
+}
+
+.inputs-container textarea {
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-top: 16px;
+  padding: 8px;
+  width: 60%;
+}
+
+.inputs-container button {
+  border-radius: 6px;
+  color: #fffffe;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-top: 16px;
+  padding: 8px;
+  width: 62%;
+}
+

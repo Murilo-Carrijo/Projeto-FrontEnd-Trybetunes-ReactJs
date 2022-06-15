@@ -1,0 +1,31 @@
+.favorites-container {
+  align-content: center;
+  align-items: center;
+  border-radius: 4px;
+  color: #00473e;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  margin-top: 64px;
+  width: 80%;
+}
+
+.music-container {
+  align-content: center;
+  align-items: center;
+  border-bottom: 1px solid #16161a;
+  display: flex;
+  justify-content: center;
+  margin: 16px;
+}
+
+.music-container h5 {
+  color: #00473e;
+  max-width: 150px;
+  padding: 16px;
+}
+
+.music-container label {
+  padding: 16px;
+}
