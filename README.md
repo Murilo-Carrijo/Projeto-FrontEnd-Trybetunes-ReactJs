@@ -1,7 +1,7 @@
 # Boas vindas ao repositório do projeto TrybeTunes!
 
 Esse projeto simula um serviço de streaming de música.
-Para realizar o projeto foi utilizado a API do itunes.
+Para realizar o projeto foi utilizado a API do iTunes.
 Todos os arquivos presentes sercice são de propriedade intelectual da Trybe.
 
 ---
